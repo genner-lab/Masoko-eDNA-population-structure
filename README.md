@@ -20,6 +20,10 @@ KrakenUniq/22mA_report.txt  Output from KrakenUniq
 
 KrakenUniq/22m-25_report.txt  Output from KrakenUniq
 
+Bacteria_KrakenUniq.txt Percentage of reads from each microbial order in each sample
+
+Topten.txt Percentage of reads from the overall top ten most prevalent microbial order in each sample, across all samples.
+
 **scripts**
 
 KrakenUniq_code.sh  Runs KrakenUniq for on each of the ONT fastq output from guppy
