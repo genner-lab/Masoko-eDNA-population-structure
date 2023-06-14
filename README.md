@@ -20,9 +20,9 @@ KrakenUniq/22mA_report.txt  Output from KrakenUniq
 
 KrakenUniq/22m-25_report.txt  Output from KrakenUniq
 
-Bacteria_KrakenUniq.txt Percentage of reads from each microbial order in each sample
+KrakenUniq/Bacteria_KrakenUniq.txt Percentage of reads from each microbial order in each sample
 
-Topten.txt Percentage of reads from the overall top ten most prevalent microbial order in each sample, across all samples.
+KrakenUniq/Topten.txt Percentage of reads from the overall top ten most prevalent microbial order in each sample, across all samples.
 
 **scripts**
 
