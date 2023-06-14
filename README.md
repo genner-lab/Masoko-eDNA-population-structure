@@ -27,3 +27,5 @@ KrakenUniq/Topten.txt Percentage of reads from the most prevalent microbial orde
 **scripts**
 
 KrakenUniq_code.sh  Runs KrakenUniq for on each of the ONT fastq output from guppy
+
+MicrobialAnalysis.R  R code for analyses of microbial data (CCA and plotting proportional compositions)
