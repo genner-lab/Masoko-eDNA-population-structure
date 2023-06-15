@@ -38,5 +38,7 @@ AlleleFrequencies_eDNA.txt Code for extracting target allele frequencies from eD
 
 AlleleFrequencies_Fish.txt Code for extracting target allele frequencies from fish vcf files
 
+Fish_eDNA_comparison_Dec2022.R R code for analyses of allele frequencies (fish and eDNA) and admixture (from fish)
+
 
 
