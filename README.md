@@ -29,3 +29,12 @@ KrakenUniq/Topten.txt Percentage of reads from the most prevalent microbial orde
 KrakenUniq_code.sh  Runs KrakenUniq for on each of the ONT fastq output from guppy
 
 MicrobialAnalysis.R  R code for analyses of microbial data (CCA and plotting proportional compositions)
+
+MappingCode.sh Code for trimming, mapping and sorting reads in fastq files to generate bam files
+
+AlleleFrequencies_eDNA.txt Code for extracting target allele frequencies from eDNA bam files
+
+AlleleFrequencies_Fish.txt Code for extracting target allele frequencies from fish vcf files
+
+
+
