@@ -1,0 +1,16 @@
+**Protocol for gel cleanup of PCR amplicons**
+
+Things to do before starting:
+
+a.	Prepare buffers and solutions following manufacturer's instructions. 
+b.	Preheat an incubator to 30 C for use in step 3.
+c.	Store absolute ethanol in -20 C freezer for at least one hour before experiment starts.
+
+Procedure
+1.	Add 4 ul (range 0-100bp) ladder to a 2% agarose gel (120 ml,TBE buffer, 1X Biotium GelRed stain). Carefully add 20-30 ul PCR product into each well. Electrophoresis for 30 mins under 100 V. 
+2.	Use a sharp blade to excise the amplicon (50-100bp), then transfer into a 2 ml microcentrifuge tube.
+3.	Add 1 volume of QE buffer (from QIAquick Gel Cleanup kit) (e.g. 100 mg gel, add 100 ul QE buffer) and incubate tubes at 35 C for at least 15 mins until the gel fully dissolves. 
+4.	Add 2 volumes of Oligo Binding buffer to the mixture (e.g. 200 ul mixture, add 400 il OB buffer), then add 400 ul -20 C absolute ethanol and mix thoroughly by pipetting.
+5.	Place a Zymo-Spin IC column in 2 ml collection tube, carefully transfer the mixture to the column, and centrifuge for 45s at 14,000 rpm. Discard flow-through and collection tube. Repeat this step to make sure all mixture goes through the spin column.
+6.	Place the spin column in a new 2 ml collection tube, add 750 ul DNA wash buffer, and centrifuge for 1 min at 14,000 rpm.  Discard flow-through and collection tube. This step can be repeated (optional). And then place the spin column in a new 2 ml collection tube and centrifuge for 2 mins at 14,000 rpm to remove the residual ethanol.
+7.	Place the spin column in a clean 2 ml microcentrifuge tube, add at least 6 ul 10 nM Tris buffer (no EDTA, which can inhibit ligation enzymes from working normally) directly to the membrane of the spin column and elute after incubation at room temperature for 10 mins. Then centrifuge for 45 s at 14,000 rpm to elute. Store the purified PCR products at -20 C before
