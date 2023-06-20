@@ -40,5 +40,5 @@ AlleleFrequencies_Fish.txt Code for extracting target allele frequencies from fi
 
 Fish_eDNA_comparison_Dec2022.R R code for analyses of allele frequencies (fish and eDNA) and admixture (from fish)
 
-
+AlleleCallingCode.txt Code for extracting allele frequencies from bam files using known variants in target regions
 
