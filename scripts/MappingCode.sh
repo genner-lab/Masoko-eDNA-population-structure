@@ -71,7 +71,7 @@ cutadapt -a AGATCGG -o L17-08_S14_L001-4_R1_001_t2.fastq.gz  L17-08_S14_L001-4_R
 cutadapt -a AGATCGG -o L17-09_S15_L001-4_R1_001_t2.fastq.gz  L17-09_S15_L001-4_R1_001.fastq.gz
 cutadapt -a AGATCGG -o L17-10_S16_L001-4_R1_001_t2.fastq.gz  L17-10_S16_L001-4_R1_001.fastq.gz
 
-#trimming, next adaptor from reverse
+#trimming, next adaptor from reverse, the product from this step is submitted to the Sequence Read Archive (PRJNA985047)
 
 cutadapt -a AGATCGG -o L07-01_S1_L001-4_R2_001_t2.fastq.gz  L07-01_S1_L001-4_R2_001_t1.fastq.gz
 cutadapt -a AGATCGG -o L07-02_S2_L001-4_R2_001_t2.fastq.gz  L07-02_S2_L001-4_R2_001_t1.fastq.gz
