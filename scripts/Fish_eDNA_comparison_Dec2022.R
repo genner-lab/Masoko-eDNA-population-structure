@@ -1,6 +1,4 @@
-setwd("~/Desktop/Zifang_ThesisAnalyses/Fish_Genomic")
-
-#### Analysis exploring if allele frequencies in eDNA and fish match####
+#### Analysis testing association between allele frequencies in eDNA and fish ####
 
 library(ggplot2)
 library(ggpubr)
@@ -37,8 +35,6 @@ AlleleFreqPlot
 
 
 ####Analysis Plotting Admixture of fish####
-
-setwd("~/Desktop/Zifang_ThesisAnalyses/Fish_Genomic")
 
 Admixture <- read.table("FishAdmixtureDec22.txt",header=TRUE,fill=TRUE,sep="\t",check.names=FALSE)
 Admixture2 <- Admixture[complete.cases(Admixture), ]
@@ -82,13 +78,13 @@ AlleleData_71_eDNA <- read.table("AlleleData_71.txt",header=TRUE,fill=TRUE,sep="
 AlleleData_71_eDNA_PCA <- pca(AlleleData_71_eDNA, method="svd", nPcs=5, centre=TRUE)
 summary(AlleleData_71_eDNA_PCA)
 
-#Extract out the PC scores and add depth column
+#Extract PC scores and add depth column
 Depth <- read.table("Depth.txt",header=TRUE,fill=TRUE,sep="\t",check.names=FALSE)
 AlleleData_71_eDNA_PCA_scores <- as.data.frame(AlleleData_71_eDNA_PCA@scores)
 AlleleData_71_eDNA_PCA_scores <- cbind (AlleleData_71_eDNA_PCA_scores, Depth)
 AlleleData_71_eDNA_PCA_scores$Depth <- as.factor(AlleleData_71_eDNA_PCA_scores$Depth)
 
-#Plot the PCA
+#Plot PCA
 PCA <- ggscatter(AlleleData_71_eDNA_PCA_scores, x = "PC1", y = "PC2", color = "Depth",
                  palette = c("#FDCC0D", "#C9AF2F", "#969251","#627572","#2E5894"),
                  ellipse = TRUE, ellipse.type = "convex", mean.point = FALSE,
@@ -97,7 +93,7 @@ PCA <- ggscatter(AlleleData_71_eDNA_PCA_scores, x = "PC1", y = "PC2", color = "D
   theme(legend.position = "right") 
 PCA
 
-####Plotting the association between contrasts in allele frequencies####
+####Plotting association between contrasts in allele frequencies####
 
 Contrasts_5_25 <- read.table("contrasts_5_25.txt",header=TRUE,fill=TRUE,sep="\t",check.names=FALSE)
 Test <- lm(fish_change_5_25~eDNA_change_5_25, data=Contrasts_5_25)
