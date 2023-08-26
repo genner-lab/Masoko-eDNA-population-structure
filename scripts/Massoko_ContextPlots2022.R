@@ -1,5 +1,3 @@
-setwd("/Users/bzmjg/Desktop/Live_Manuscripts/eDNA_alleles_Zifang")
-
 library(ggplot2)
 library(ggpubr)
 library(ggokabeito)
