@@ -36,11 +36,11 @@ KrakenUniq_code.sh  Runs KrakenUniq for on each of the ONT fastq output from gup
 
 MicrobialAnalysis.R  R code for analyses of microbial data (CCA and plotting proportional compositions)
 
-MappingCode.sh Code for trimming, mapping and sorting reads in fastq files to generate bam files
+MappingCode.sh Code for trimming, mapping and sorting eDNA reads in fastq files to generate eDNA bam files
 
 AlleleFrequencies_eDNA.txt Code for extracting target allele frequencies from eDNA bam files
 
-AlleleFrequencies_Fish.txt Code for extracting target allele frequencies from fish vcf files
+AlleleFrequencies_Fish.txt Code for extracting target allele frequencies from fish vcf file
 
 Fish_eDNA_comparison_Dec2022.R R code for analyses of allele frequencies (fish and eDNA) and admixture (from fish)
 
