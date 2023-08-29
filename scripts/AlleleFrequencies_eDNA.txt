@@ -1,32 +1,32 @@
 ###Filter the vcf to focus on target region
 
-vcftools --gzvcf all_CalMas_variants_genome_gwas_clean.vcf.gz --bed Focal_SNPs.bed --out Focal_SNPs_120SNPs.vcf --recode --keep-INFO-all
+vcftools --gzvcf all_CalMas_variants_genome_gwas_clean.vcf.gz --bed Focal_regions.bed --out Focal_SNPs.vcf --recode --keep-INFO-all
 
 ###There are 120 SNPs in our focal regions. We need to manually curate the MilanSNPs_focus_7Jan.vcf, recoding the chromosome names to precisely match those in the reference genome we are using, i.e. chr1 becomes NC_039302.1. We also need to make sure that we delete those variants that are listed twice in the filtered vcf file, so we remain with a list of 120SNPs within it.
 
-###The new curated file is: Focal_SNPs_120SNPs_recode.vcf
+###The new curated file is: Focal_120SNPs.vcf
 
 ###Index the vcf file
 
-gatk --java-options "-Xmx8G" IndexFeatureFile -I Focal_SNPs_120SNPs_recode.vcf
+gatk --java-options "-Xmx8G" IndexFeatureFile -I Focal_120SNPs.vcf
 
 ###Use ASEReadCounter to count the target alleles
 
-gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample01_sorted_named.bam -V Focal_SNPs_120SNPs_recode.vcf -O output_ASE_Sample01.table
-gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample02_sorted_named.bam -V Focal_SNPs_120SNPs_recode.vcf -O output_ASE_Sample02.table 
-gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample03_sorted_named.bam -V Focal_SNPs_120SNPs_recode.vcf -O output_ASE_Sample03.table 
-gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample04_sorted_named.bam -V Focal_SNPs_120SNPs_recode.vcf -O output_ASE_Sample04.table 
-gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample05_sorted_named.bam -V Focal_SNPs_120SNPs_recode.vcf -O output_ASE_Sample05.table 
-gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample06_sorted_named.bam -V Focal_SNPs_120SNPs_recode.vcf -O output_ASE_Sample06.table 
-gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample07_sorted_named.bam -V Focal_SNPs_120SNPs_recode.vcf -O output_ASE_Sample07.table 
-gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample08_sorted_named.bam -V Focal_SNPs_120SNPs_recode.vcf -O output_ASE_Sample08.table
-gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample09_sorted_named.bam -V Focal_SNPs_120SNPs_recode.vcf -O output_ASE_Sample09.table
-gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample10_sorted_named.bam -V Focal_SNPs_120SNPs_recode.vcf -O output_ASE_Sample10.table 
-gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample11_sorted_named.bam -V Focal_SNPs_120SNPs_recode.vcf -O output_ASE_Sample11.table 
-gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample12_sorted_named.bam -V Focal_SNPs_120SNPs_recode.vcf -O output_ASE_Sample12.table 
-gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample13_sorted_named.bam -V Focal_SNPs_120SNPs_recode.vcf -O output_ASE_Sample13.table 
-gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample14_sorted_named.bam -V Focal_SNPs_120SNPs_recode.vcf -O output_ASE_Sample14.table 
-gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample15_sorted_named.bam -V Focal_SNPs_120SNPs_recode.vcf -O output_ASE_Sample15.table 
-gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample16_sorted_named.bam -V Focal_SNPs_120SNPs_recode.vcf -O output_ASE_Sample16.table
+gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample01_sorted_named.bam -V Focal_120SNPs.vcf -O output_ASE_Sample01.table
+gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample02_sorted_named.bam -V Focal_120SNPs.vcf -O output_ASE_Sample02.table 
+gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample03_sorted_named.bam -V Focal_120SNPs.vcf -O output_ASE_Sample03.table 
+gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample04_sorted_named.bam -V Focal_120SNPs.vcf -O output_ASE_Sample04.table 
+gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample05_sorted_named.bam -V Focal_120SNPs.vcf -O output_ASE_Sample05.table 
+gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample06_sorted_named.bam -V Focal_120SNPs.vcf -O output_ASE_Sample06.table 
+gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample07_sorted_named.bam -V Focal_120SNPs.vcf -O output_ASE_Sample07.table 
+gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample08_sorted_named.bam -V Focal_120SNPs.vcf -O output_ASE_Sample08.table
+gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample09_sorted_named.bam -V Focal_120SNPs.vcff -O output_ASE_Sample09.table
+gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample10_sorted_named.bam -V Focal_120SNPs.vcf -O output_ASE_Sample10.table 
+gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample11_sorted_named.bam -V Focal_120SNPs.vcf -O output_ASE_Sample11.table 
+gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample12_sorted_named.bam -V Focal_120SNPs.vcf -O output_ASE_Sample12.table 
+gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample13_sorted_named.bam -V Focal_120SNPs.vcf -O output_ASE_Sample13.table 
+gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample14_sorted_named.bam -V Focal_120SNPs.vcf -O output_ASE_Sample14.table 
+gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample15_sorted_named.bam -V Focal_120SNPs.vcf -O output_ASE_Sample15.table 
+gatk --java-options "-Xmx8G" ASEReadCounter -R fAstCal1.2.fna -I sample16_sorted_named.bam -V Focal_120SNPs.vcf -O output_ASE_Sample16.table
 
 ###Manually curate outputs to generate table, end.
