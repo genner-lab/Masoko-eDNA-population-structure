@@ -34,9 +34,7 @@ KrakenUniq/Topten.txt Percentage of reads from the most prevalent microbial orde
 
 MassokoContext/Delalande_Data.txt
 
-MassokoContext/Sidewelling_Light.txt
-
-MassokoContext/MaxLight.txt  <br><br>
+MassokoContext/Sidewelling_Light.txt  <br><br>
 
 MassokoAlleles/Focal_regions The 98 regions identified to contain SNPs (primers in Table S2)
 
