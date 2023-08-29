@@ -32,7 +32,7 @@ KrakenUniq/Bacteria_KrakenUniq.txt Percentage of reads from each microbial order
 
 KrakenUniq/Topten.txt Percentage of reads from the most prevalent microbial orders by sample
 
----
+***
 
 MassokoContext/Delalande_Data.txt
 
@@ -40,24 +40,21 @@ MassokoContext/Sidewelling_Light.txt
 
 MassokoContext/MaxLight.txt
 
----
+***
 
 MassokoAlleles/AlleleSummaryData.xlsx Summary data of eDNA and fish allele frequencies
 
----
+***
 
 **scripts**
 
----
+***
 
 KrakenUniq_code.sh  Runs KrakenUniq for on each of the ONT fastq output from guppy
 
 MicrobialAnalysis.R  R code for analyses of microbial data (CCA and plotting proportional compositions)
 
-&nbsp; 
-
 Massoko_ContextPlots2022.R
-
 
 MappingCode.sh Code for trimming, mapping and sorting eDNA reads in fastq files to generate eDNA bam files
 
