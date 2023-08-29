@@ -95,17 +95,17 @@ PCA
 
 ####Plotting association between contrasts in allele frequencies####
 
-Contrasts_5_25 <- read.table("contrasts_5_25.txt",header=TRUE,fill=TRUE,sep="\t",check.names=FALSE)
-Test <- lm(fish_change_5_25~eDNA_change_5_25, data=Contrasts_5_25)
+Contrasts_3_22 <- read.table("contrasts_3_22.txt",header=TRUE,fill=TRUE,sep="\t",check.names=FALSE)
+Test <- lm(fish_change_3_22~eDNA_change_3_22, data=Contrasts_3_22)
 summary(Test)
 
-cor.test(Contrasts_5_25$eDNA_change_5_25,Contrasts_5_25$fish_change_5_25, method = c("pearson"))
+cor.test(Contrasts_3_22$eDNA_change_3_22,Contrasts_3_22$fish_change_3_22, method = c("pearson"))
 
-Contrasts_5_25_plot <- ggplot(Contrasts_5_25 , aes(eDNA_change_5_25, y=fish_change_5_25)) +
+Contrasts_3_22_plot <- ggplot(Contrasts_3_22 , aes(eDNA_change_3_22, y=fish_change_2_22)) +
   theme_classic() +
   geom_point(size=2)+ 
   geom_smooth(method = "lm", color="black") +
-  labs(x = "eDNA: Change in allele frequency (5 to 25m)", y = "fish: Change in allele frequency (5 to 25m)")
-Contrasts_5_25_plot
+  labs(x = "eDNA: Change in allele frequency (3 to 22m)", y = "fish: Change in allele frequency (3 to 22m)")
+Contrasts_3_22_plot
 
 
