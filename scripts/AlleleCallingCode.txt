@@ -4,7 +4,7 @@ vcftools --gzvcf all_CalMas_variants_genome_gwas_clean.vcf.gz --bed Focal_region
 
 ###There are 120 SNPs in our focal regions. We need to manually curate the Focal_SNPs.vcf, recoding the chromosome names to precisely match those in the reference genome we are using, i.e. chr1 becomes NC_039302.1. We also delete those variants that are listed twice in the filtered vcf file, remaining with a list of 120SNPs within it.
 
-###The new curated file is: Focal_SNPs_120SNPs_recode.vcf
+###The new curated file is: Focal_120SNPs.vcf
 
 ###Index the vcf file
 
