@@ -36,7 +36,7 @@ AlleleFreqPlot
 
 ####Analysis Plotting Admixture of fish####
 
-Admixture <- read.table("FishAdmixtureDec22.txt",header=TRUE,fill=TRUE,sep="\t",check.names=FALSE)
+Admixture <- read.table("FishAdmixture.txt",header=TRUE,fill=TRUE,sep="\t",check.names=FALSE)
 Admixture2 <- Admixture[complete.cases(Admixture), ]
 Admixture2$Depth_m <- as.factor(Admixture$Depth_m)
 Admixture2$Depth_m <- factor(Admixture2$Depth_m, levels=c("22", "18", "12", "7", "3"))
