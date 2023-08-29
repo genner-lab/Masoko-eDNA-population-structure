@@ -38,6 +38,8 @@ MassokoContext/Sidewelling_Light.txt
 
 MassokoContext/MaxLight.txt  <br><br>
 
+MassokoAlleles/Focal_regions The 98 regions of the genome identified to contain SNPs (matching primers in Table S2)
+
 MassokoAlleles/AlleleSummaryData.xlsx Summary data of eDNA and fish allele frequencies
 
 ***
