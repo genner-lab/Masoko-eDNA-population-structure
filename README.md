@@ -28,7 +28,7 @@ KrakenUniq/Bacteria_KrakenUniq.txt Percentage of reads from each microbial order
 
 KrakenUniq/Topten.txt Percentage of reads from the most prevalent microbial orders by sample
 
-&nbsp;
+***
 
 MassokoContext/Delalande_Data.txt
 
@@ -36,7 +36,7 @@ MassokoContext/Sidewelling_Light.txt
 
 MassokoContext/MaxLight.txt
 
-&nbsp;
+***
 
 AlleleSummaryData.xlsx Summary data of eDNA and fish allele frequencies  
 
