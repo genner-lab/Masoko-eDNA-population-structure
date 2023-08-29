@@ -1,6 +1,6 @@
 ###Filter the vcf of all Lake Masoko sequenced fish to focus on target region
 
-vcftools --gzvcf all_CalMas_variants_genome_gwas_clean.vcf.gz --bed Focal_SNPs.bed --out Focal_SNPs.vcf --recode --keep-INFO-all
+vcftools --gzvcf all_CalMas_variants_genome_gwas_clean.vcf.gz --bed Focal_regions.bed --out Focal_SNPs.vcf --recode --keep-INFO-all
 
 ###There are 120 SNPs in our focal regions. We need to manually curate the Focal_SNPs.vcf, recoding the chromosome names to precisely match those in the reference genome we are using, i.e. chr1 becomes NC_039302.1. We also delete those variants that are listed twice in the filtered vcf file, remaining with a list of 120SNPs within it.
 
