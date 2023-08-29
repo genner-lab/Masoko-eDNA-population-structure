@@ -28,7 +28,7 @@ KrakenUniq/Bacteria_KrakenUniq.txt Percentage of reads from each microbial order
 
 KrakenUniq/Topten.txt Percentage of reads from the most prevalent microbial orders by sample
 
-***
+---
 
 MassokoContext/Delalande_Data.txt
 
