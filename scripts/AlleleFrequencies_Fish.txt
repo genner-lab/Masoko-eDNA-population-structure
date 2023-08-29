@@ -1,14 +1,14 @@
 ###We retain the 71 SNPs that are in 75% of the samples (12 or more), and these are listed in 71_Cichlid_SNP.bed
 
-vcftools --gzvcf all_CalMas_variants_genome_gwas_clean.vcf.gz --bed 71_Cichlid_SNP.bed --out 71_Cichlid_SNP_focus_7Jan.vcf --recode --keep-INFO-all
+vcftools --gzvcf all_CalMas_variants_genome_gwas_clean.vcf.gz --bed Focal_71SNPs.bed --out Focal_71SNPs.vcf --recode --keep-INFO-all
 
-###Manually change the file name to 71_Cichlid_SNP_focus_7Jan.vcf and subdivide this focussed vcf file on specimens from each of the five depths, who are named in five text files
+###Manually change the file name to Focal_71SNPs.vcf and subdivide this focussed vcf file on specimens from each of the five depths, who are named in five text files
 
-bcftools view -Oz -S 0-5m.txt 71_Cichlid_SNP_focus_7Jan.vcf > 05m_samples.vcf.gz
-bcftools view -Oz -S 5-10m.txt 71_Cichlid_SNP_focus_7Jan.vcf > 10m_samples.vcf.gz
-bcftools view -Oz -S 10-15m.txt 71_Cichlid_SNP_focus_7Jan.vcf > 15m_samples.vcf.gz
-bcftools view -Oz -S 15-20m.txt 71_Cichlid_SNP_focus_7Jan.vcf > 20m_samples.vcf.gz
-bcftools view -Oz -S 20-25m.txt 71_Cichlid_SNP_focus_7Jan.vcf >25m_samples.vcf.gz
+bcftools view -Oz -S 0-5m.txt Focal_71SNPs.vcf > 05m_samples.vcf.gz
+bcftools view -Oz -S 5-10m.txt Focal_71SNPs.vcf > 10m_samples.vcf.gz
+bcftools view -Oz -S 10-15m.txt Focal_71SNPs.vcf > 15m_samples.vcf.gz
+bcftools view -Oz -S 15-20m.txt Focal_71SNPs.vcf > 20m_samples.vcf.gz
+bcftools view -Oz -S 20-25m.txt Focal_71SNPs.vcf >25m_samples.vcf.gz
 
 ###obtain the allele frequencies of all biallelic SNPs in each of those files
 
