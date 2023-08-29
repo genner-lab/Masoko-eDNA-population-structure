@@ -30,7 +30,7 @@ KrakenUniq/22m-25_report.txt  Output from KrakenUniq
 
 KrakenUniq/Bacteria_KrakenUniq.txt Percentage of reads from each microbial order in each sample
 
-KrakenUniq/Topten.txt Percentage of reads from the most prevalent microbial orders by sample <br>  
+KrakenUniq/Topten.txt Percentage of reads from the most prevalent microbial orders by sample  <br>  
 
 MassokoContext/Delalande_Data.txt
 
