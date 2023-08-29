@@ -40,8 +40,9 @@ MassokoContext/MaxLight.txt  <br><br>
 
 MassokoAlleles/Focal_regions The 98 regions identified to contain SNPs (primers in Table S2)
 
-MassokoAlleles/AlleleSummaryData.xlsx Summary data of eDNA and fish allele frequencies
+MassokoAlleles/Focal_120SNPs.vcf Alleles called from focal 120 SNPs in fish samples 
 
+MassokoAlleles/AlleleSummaryData.xlsx Summary data of eDNA and fish allele frequencies
 ***
 
 **scripts**
