@@ -4,7 +4,11 @@ Code and data for Liu et al. Nuclear environmental DNA resolves fine-scale popul
 
 NB, the fish data are mapped to the fAstCal1.2 genome; GCA_900246225.3
 
+---
+
 **assets**
+
+---
 
 KrakenUniq/3mA_report.txt  Output from KrakenUniq
 
@@ -36,11 +40,15 @@ MassokoContext/Sidewelling_Light.txt
 
 MassokoContext/MaxLight.txt
 
-***
+---
 
-AlleleSummaryData.xlsx Summary data of eDNA and fish allele frequencies  
+MassokoAlleles/AlleleSummaryData.xlsx Summary data of eDNA and fish allele frequencies
+
+---
 
 **scripts**
+
+---
 
 KrakenUniq_code.sh  Runs KrakenUniq for on each of the ONT fastq output from guppy
 
