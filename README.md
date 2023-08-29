@@ -56,11 +56,13 @@ Massoko_ContextPlots2022.R  <br><br>
 
 MappingCode.sh Code for trimming, mapping and sorting eDNA reads in fastq files to generate eDNA bam files
 
+AlleleCallingCode.txt Code for extracting allele frequencies from eDNA bam files using known variants in target regions
+
 AlleleFrequencies_eDNA.txt Code for extracting target allele frequencies from eDNA bam files
 
 AlleleFrequencies_Fish.txt Code for extracting target allele frequencies from fish vcf file
 
 Fish_eDNA_comparison_Dec2022.R R code for analyses of allele frequencies (fish and eDNA) and admixture (from fish)
 
-AlleleCallingCode.txt Code for extracting allele frequencies from bam files using known variants in target regions
+
 
