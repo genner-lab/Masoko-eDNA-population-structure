@@ -74,7 +74,7 @@ if (!require("BiocManager", quietly = TRUE))
 BiocManager::install("pcaMethods")
 library(pcaMethods)
 
-AlleleData_71_eDNA <- read.table("AlleleData_71.txt",header=TRUE,fill=TRUE,sep="\t",check.names=FALSE)
+AlleleData_71_eDNA <- read.table("eDNA_AlleleData_71.txt",header=TRUE,fill=TRUE,sep="\t",check.names=FALSE)
 AlleleData_71_eDNA_PCA <- pca(AlleleData_71_eDNA, method="svd", nPcs=5, centre=TRUE)
 summary(AlleleData_71_eDNA_PCA)
 
