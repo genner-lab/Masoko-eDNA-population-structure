@@ -38,7 +38,7 @@ MassokoContext/Sidewelling_Light.txt Raw light intensity data for 5 replicates
 
 MassokoContext/MaxLight.txt Maximum light intensity data for 5 replicates <br><br>
 
-MassokoAlleles/Focal_regions The 98 regions identified to contain SNPs (primers in Table S2)
+MassokoAlleles/Focal_regions.bed The 98 regions identified to contain SNPs (primers in Table S2)
 
 MassokoAlleles/Focal_120SNPs.vcf Alleles called from focal 120 SNPs in fish samples 
 
