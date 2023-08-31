@@ -1,0 +1,28 @@
+#Begin analysis with with full vcf file sourced from Munby et al. (all_CalMas_variants_genome_gwas_clean.vcf.gz)
+
+#First prune out SNPs in linkage disequilibrium from main set (3107901 of 3881258 variants removed)
+
+plink --vcf all_CalMas_variants_genome_gwas_clean.vcf.gz --double-id --allow-extra-chr --set-missing-var-ids @:# --indep-pairwise 50 10 0.1 --out cichlids
+
+#generated the required prune.in file; make the bed, bim and fam files required for Admixture
+
+plink --vcf all_CalMas_variants_genome_gwas_clean.vcf.gz --double-id --allow-extra-chr --set-missing-var-ids @:# --extract cichlids.prune.in --make-bed
+
+#Run run admixture on the filtered data
+
+admixture --cv plink.bed 2 > prunedgenome.out
+
+#Repeat analysis for 71 SNP set, within . Initially making bed files for the 71 SNP set
+
+plink --vcf Focal_71SNPs.vcf --make-bed --out 71_Cichlid_SNP_focus.out --allow-extra-chr
+
+#just some edits to the .bim file
+
+awk '{$1="0";print $0}' 71_Cichlid_SNP_focus.out.bim > 71_Cichlid_SNP_focus.out.bim.tmp
+mv 71_Cichlid_SNP_focus.out.bim.tmp 71_Cichlid_SNP_focus.out.bim
+
+#now run Admixture
+
+admixture --cv 71_Cichlid_SNP_focus.out.bed 2 > 71SNPs.out
+
+#end
