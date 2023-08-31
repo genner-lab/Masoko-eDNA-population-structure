@@ -36,7 +36,7 @@ ggarrange(Temp, Oxygen,
 
 MaxLight <- read.table("MaxLight.txt",header=TRUE,fill=TRUE,sep="\t",check.names=FALSE)
 
-Light <- ggplot(MaxLight, aes(y=Depth, x=Intensity, color = Replicate)) +
+Light <- ggplot(MaxLight, aes(y=Depth, x=Intensity, color = Repeat)) +
   theme_classic() +
   geom_point(size = 3) + scale_y_reverse() +
   geom_smooth(method = "gam", size = 1.5, orientation = "y", se = FALSE, span = 3) +
