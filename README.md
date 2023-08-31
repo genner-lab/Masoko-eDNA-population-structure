@@ -46,13 +46,15 @@ MassokoAlleles/Focal_71SNPs.vcf Alleles called from focal 71 SNPs in fish sample
 
 MassokoAlleles/Focal_71SNPs.bed Coordinates of the 71 SNPs reliably represented in eDNA data
 
-MassokoAlleles/Data_long eDNA and fish (reference) allele frequencies at each depth (long format)
+MassokoAlleles/Data_long.txt eDNA and fish (reference) allele frequencies at each depth (long format)
 
-MassokoAlleles/FishAdmixture Admixture proportions for individual fish; genome-wide and 71 SNPs
+MassokoAlleles/FishAdmixture.txt Admixture proportions for individual fish; genome-wide and 71 SNPs
 
-MassokoAlleles/eDNA_AlleleData_71 Frequencies of (reference) alleles in each eDNA sample
+MassokoAlleles/eDNA_AlleleData_71.txt Frequencies of (reference) alleles in each eDNA sample
 
-MassokoAlleles/contrasts3_22 Contrasts in frequencies of (reference) alleles from 3 to 22m, fish and eDNA
+MassokoAlleles/contrasts3_22.txt Contrasts in frequencies of (reference) alleles from 3 to 22m, fish and eDNA
+
+MassokoAlleles/depth.txt Sampling depth for the 16 eDNA samples used to quantify allele frequencies
 
 MassokoAlleles/AlleleAnalysis_Summary.xls An excel workbook summarising key data
 
