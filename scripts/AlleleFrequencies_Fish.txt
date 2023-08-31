@@ -2,7 +2,7 @@
 
 vcftools --gzvcf all_CalMas_variants_genome_gwas_clean.vcf.gz --bed Focal_71SNPs.bed --out Focal_71SNPs.vcf --recode --keep-INFO-all
 
-###Manually change the file name to Focal_71SNPs.vcf and subdivide this focussed vcf file on specimens from each of the five depths, who are named in five text files
+###Manually change the file name to Focal_71SNPs.vcf and subdivide this focussed vcf file on specimens from each of the five depths, who are named in five text files. The information linking sample names to collection depths is available in FishAdmixture.txt.
 
 bcftools view -Oz -S 0-5m.txt Focal_71SNPs.vcf > 05m_samples.vcf.gz
 bcftools view -Oz -S 5-10m.txt Focal_71SNPs.vcf > 10m_samples.vcf.gz
