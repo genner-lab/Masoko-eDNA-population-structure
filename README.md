@@ -32,9 +32,11 @@ KrakenUniq/Bacteria_KrakenUniq.txt Percentage of reads from each microbial order
 
 KrakenUniq/Topten.txt Percentage of reads from the most prevalent microbial orders by sample  <br><br>
 
-MassokoContext/Delalande_Data.txt
+MassokoContext/Delalande_Data.txt Oxygen and temperature data, from Delalande (cited in text)
 
-MassokoContext/Sidewelling_Light.txt  <br><br>
+MassokoContext/Sidewelling_Light.txt Raw light intensity data for 5 replicates
+
+MassokoContext/MaxLight.txt Maximum light intensity data for 5 replicates <br><br>
 
 MassokoAlleles/Focal_regions The 98 regions identified to contain SNPs (primers in Table S2)
 
