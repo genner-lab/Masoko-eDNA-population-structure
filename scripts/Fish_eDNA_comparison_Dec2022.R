@@ -26,7 +26,9 @@ Corr_18m
 Corr_22m
 
 #FacetPlotFigure, Export pdf as 3.5 x 10
-  
+
+Data_long$Depth_f <- as.factor(Data_long$Depth)
+
 AlleleFreqPlot <- ggplot(Data_long, aes(FishFrequency, eDNAFrequency)) + 
   theme_classic() +
   geom_point() + 
@@ -115,4 +117,4 @@ Contrasts_3_22_plot <- ggplot(Contrasts_3_22 , aes(eDNA_change_3_22, y=fish_chan
   labs(x = "eDNA: Change in allele frequency (3 to 22m)", y = "fish: Change in allele frequency (3 to 22m)")
 Contrasts_3_22_plot
 
-###end
+##end
