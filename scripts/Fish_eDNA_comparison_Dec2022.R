@@ -7,18 +7,23 @@ library(dplyr)
 
 #LinearModels for each depth
 Data_long <- read.table("Data_long.txt",header=TRUE,fill=TRUE,sep="\t",check.names=FALSE)
-Data_long$Depth_f = factor(Data_long$Depth, levels=c('3m','7m','12m','18m','22m'))
+Data_3m <- subset(Data_long, Depth == '3m')
+Data_7m <- subset(Data_long, Depth == '7m')
+Data_12m <- subset(Data_long, Depth == '12m')
+Data_18m <- subset(Data_long, Depth == '18m')
+Data_22m <- subset(Data_long, Depth == '22m')
 
-Model3m <- lm(eDNAFrequency~FishFrequency, data=subset(Data_long ,Depth=="3m"))
-summary(Model3m)
-Model7m <- lm(eDNAFrequency~FishFrequency, data=subset(Data_long ,Depth=="7m"))
-summary(Model7m)
-Model12m <- lm(eDNAFrequency~FishFrequency, data=subset(Data_long ,Depth=="12m"))
-summary(Model12m)
-Model18m <- lm(eDNAFrequency~FishFrequency, data=subset(Data_long ,Depth=="18m"))
-summary(Model18m)
-Model22m <- lm(eDNAFrequency~FishFrequency, data=subset(Data_long ,Depth=="22m"))
-summary(Model22m)
+Corr_3m <- cor.test(Data_3m$eDNAFrequency,Data_3m$FishFrequency, method = c("pearson"))
+Corr_7m <- cor.test(Data_7m$eDNAFrequency,Data_7m$FishFrequency, method = c("pearson"))
+Corr_12m <- cor.test(Data_12m$eDNAFrequency,Data_12m$FishFrequency, method = c("pearson"))
+Corr_18m <- cor.test(Data_18m$eDNAFrequency,Data_18m$FishFrequency, method = c("pearson"))
+Corr_22m <- cor.test(Data_22m$eDNAFrequency,Data_22m$FishFrequency, method = c("pearson"))
+
+Corr_3m
+Corr_7m
+Corr_12m
+Corr_18m
+Corr_22m
 
 #FacetPlotFigure, Export pdf as 3.5 x 10
   
@@ -38,7 +43,7 @@ AlleleFreqPlot
 
 Admixture <- read.table("FishAdmixture.txt",header=TRUE,fill=TRUE,sep="\t",check.names=FALSE)
 Admixture2 <- Admixture[complete.cases(Admixture), ]
-Admixture2$Depth_m <- as.factor(Admixture$Depth_m)
+Admixture2$Depth_m <- as.factor(Admixture2$Depth_m)
 Admixture2$Depth_m <- factor(Admixture2$Depth_m, levels=c("22", "18", "12", "7", "3"))
 
 library(ggplot2)
@@ -48,22 +53,24 @@ library(gghalves)
 
 plot1 <- ggplot(Admixture2, aes(Depth_m,Admix_71_Pop1, color = Depth_m)) + 
   scale_colour_manual(values = c("#2E5894", "#627572", "#969251","#C9AF2F","#FDCC0D"))+
-  ggdist::stat_halfeye(adjust = .5, width = .5, .width = 0, justification = -.3) + 
+  ggdist::stat_halfeye(adjust = .5, width = .5, .width = 0.2, justification = -.3, scale=1) + 
   geom_boxplot(width = .1, outlier.shape = NA) +
   gghalves::geom_half_point(side = "l", range_scale = .4, alpha = .5) +
   theme_classic() + coord_flip() + theme(legend.position="none") +
-  labs(x ="Depth (m)", y = "Proportion benthic ancestry")
+  labs(x ="Depth (m)", y = "Proportion benthic ancestry (71 focal SNPs)")
+plot1
 
 plot2  <- ggplot(Admixture2, aes(Depth_m,Admix_All_Pop1, color = Depth_m)) + 
   scale_colour_manual(values = c("#2E5894", "#627572", "#969251","#C9AF2F","#FDCC0D"))+
-  ggdist::stat_halfeye(adjust = .5, width = .5, .width = 0, justification = -.3) + 
+  ggdist::stat_halfeye(adjust = 1, width = .5, .width = 0.2, justification = -.3, scale = 1) + 
   geom_boxplot(width = .1, outlier.shape = NA) +
   gghalves::geom_half_point(side = "l", range_scale = .4, alpha = .5) +
   theme_classic() + coord_flip() + theme(legend.position="none") +
-  labs(x ="Depth (m)", y = "Proportion benthic ancestry")
+  labs(x ="Depth (m)", y = "Proportion benthic ancestry (whole genome SNPs)")
+plot2
 
-mergedplot <- ggarrange(plot1, plot2, 
-          labels = c("A", "B"),
+mergedplot <- ggarrange(plot2, plot1, 
+          labels = c(" ", " "),
           ncol = 2, nrow = 1)
 mergedplot
 
@@ -108,4 +115,4 @@ Contrasts_3_22_plot <- ggplot(Contrasts_3_22 , aes(eDNA_change_3_22, y=fish_chan
   labs(x = "eDNA: Change in allele frequency (3 to 22m)", y = "fish: Change in allele frequency (3 to 22m)")
 Contrasts_3_22_plot
 
-
+###end
