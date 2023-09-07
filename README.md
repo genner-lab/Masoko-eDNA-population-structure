@@ -12,8 +12,6 @@ NB, the fish data are mapped to the fAstCal1.2 genome; GCA_900246225.3
 
 SupplementaryTable.xlsx Supplementary Tables for the submitted manuscript <br><br>
 
-***
-
 KrakenUniq/3mA_report.txt  Output from KrakenUniq
 
 KrakenUniq/3mB_report.txt  Output from KrakenUniq
