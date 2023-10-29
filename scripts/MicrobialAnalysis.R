@@ -27,17 +27,19 @@ BactPlot <- ggplot(BacteriaPlotData, aes(x=CCA1, y=Depth)) +
   scale_colour_vibrant()
 BactPlot
 
+export as 4 x 4.5
+
 TopTen <- read.table("TopTen.txt",header=TRUE,fill=TRUE,sep="\t",check.names=FALSE)
 Position <- c("3m", "7m-18m", "22m")
-TopTen$Depth <- factor(TopTen$Depth,levels = c("3m", "7m-18m", "22m"))
+TopTen$Depth <- factor(TopTen$Depth,(levels = c("3m", "7m-18m", "22m")))
 p <- ggplot(data=TopTen, aes(x=PercentageReads, y=Taxon, fill=Depth)) +
-  labs(y = " ", x = "Percentage of assigned reads") +
+  labs(y = " ", x = "Percentage of classified bacterial reads") +
   geom_bar(stat="identity", color="black", position=position_dodge()) +
-  scale_fill_brewer(palette = "YlGnBu", direction=1, guide = guide_legend(reverse = TRUE)) +
+  scale_fill_brewer(palette = "YlGnBu") +
   theme_classic() + coord_flip() +
-  theme(axis.text.x=element_text(angle=40, hjust=1))
+  theme(axis.text.x=element_text(angle=45, hjust=1,size = 11))
 p
 
-export as 9 x 5
+export as 7 x 5
 
 ## end of code
