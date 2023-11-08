@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/619981765.svg)](https://zenodo.org/doi/10.5281/zenodo.10083981)
+
 # Masoko-eDNA-population-structure
 
 Code and data for Liu et al. Nuclear environmental DNA resolves fine-scale population genetic structure in an aquatic environment.
